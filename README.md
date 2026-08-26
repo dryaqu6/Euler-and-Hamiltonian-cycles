@@ -16,8 +16,9 @@ Bài toán thực tế: cho một mạng lưới các điểm giao hàng, tìm l
 | **TSP — Quy hoạch động (Held–Karp)** | **lời giải chính xác** | bitmask DP trên trạng thái `(tập đã thăm, đỉnh cuối)`, O(2ⁿ·n²), giới hạn n ≤ 20 |
 | **TSP — Nearest Neighbor** | heuristic tham lam | O(n²), dùng làm tour khởi tạo |
 | **TSP — 2-opt** | tìm kiếm cục bộ | đảo đoạn, first-improvement, tối đa 1000 vòng lặp |
-| **Chu trình Euler** | duyệt đồ thị | kiểm tra điều kiện tồn tại + truy vết |
-| **Chu trình Hamilton** | backtracking | kiểm tra tồn tại + truy vết đường đi |
+| **Chu trình Euler — Hierholzer** | duyệt đồ thị | kiểm tra điều kiện mọi đỉnh bậc chẵn, duyệt bằng stack và xoá cạnh dần bằng `Counter` (chịu được đa cạnh), O(V+E) |
+| **Chu trình Hamilton** | backtracking | đệ quy có mảng `visited`, kiểm tra cạnh đóng vòng; **không cắt tỉa** → O(n!) tệ nhất |
+| *`is_strongly_connected`* | kiểm tra liên thông | DFS bằng stack từ **mọi** đỉnh → O(n³) |
 
 Do TSP chạy trên ma trận khoảng cách đã qua Floyd–Warshall, bài toán **không đòi hỏi đồ thị đầy đủ** — phù hợp với mạng lưới giao hàng thực tế, nơi không phải điểm nào cũng nối trực tiếp với nhau.
 
@@ -36,6 +37,7 @@ Phần demo có trực quan hoá và animation lộ trình bằng `matplotlib` /
 - 2-opt dừng ở **cải thiện đầu tiên** (first-improvement); chưa thử best-improvement, Or-opt hay 3-opt.
 - Phần so sánh đối chiếu **chi phí tour**, chưa đo thời gian chạy thực tế.
 - `find_hamiltonian_cycle` dùng backtracking thuần, không cắt tỉa — chi phí tăng rất nhanh theo n.
+- **Không nhất quán hướng của đồ thị:** `find_eulerian_cycle` xử lý đồ thị như **vô hướng** (chỉ duyệt nửa trên ma trận), trong khi `is_strongly_connected` và các lời giải TSP xử lý như **có hướng**. Với ma trận đối xứng thì không ảnh hưởng, nhưng nếu nhập ma trận bất đối xứng thì kết quả Euler sẽ không khớp với phần còn lại.
 
 ## 📁 Cấu trúc
 
