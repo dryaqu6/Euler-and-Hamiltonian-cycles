@@ -1,9 +1,5 @@
 # Bài toán định tuyến giao hàng — chu trình Euler/Hamilton và TSP
 
-> **Đồ án cuối kỳ môn Lý thuyết đồ thị — Nhóm 9**, Khoa Toán – Tin học, Trường ĐH Khoa học Tự nhiên, ĐHQG-HCM (06/2025).
-> Thành viên: **Lê Hoàng An** (22110002) · **Trần Duy An** (22110008) · **Phạm Hoàng Dũng** (22110043).
-> Giảng viên hướng dẫn: **Nguyễn Thị Hoài Thương**.
-
 Cài đặt và so sánh các thuật toán định tuyến trên đồ thị có trọng số, đóng gói trong lớp `VisualizedDeliveryProblemSolver` (nhận ma trận kề n×n, quy ước `0` = không có cạnh).
 
 Bài toán thực tế: cho một mạng lưới các điểm giao hàng, tìm lộ trình đi qua tất cả các điểm và quay về kho xuất phát với tổng quãng đường nhỏ nhất.
@@ -46,7 +42,7 @@ src/     main_PPS.ipynb    toàn bộ cài đặt + demo có trực quan hoá
 report/  final_PPS.pdf     báo cáo
 ```
 
-## 📖 Nội dung lý thuyết kèm theo
+## 📖 Nội dung lý thuyết trong báo cáo
 
 1. Hệ thống định nghĩa: ma trận kề, đồ thị liên thông, chu trình.
 2. Điều kiện tồn tại chu trình Euler / Hamilton và thuật toán tìm.
