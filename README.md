@@ -42,6 +42,10 @@ src/     main_PPS.ipynb    toàn bộ cài đặt + demo có trực quan hoá
 report/  final_PPS.pdf     báo cáo
 ```
 
+Đã chạy thử trên các đồ thị 5, 8 và 12 điểm. Ví dụ 5 điểm trong notebook: lời giải tối ưu `0 → 4 → 1 → 2 → 3 → 0`, chi phí **221.69**, trong đó 2-opt hội tụ sau 2 vòng lặp và Held--Karp cho tour tốt nhất.
+
+⚠️ Báo cáo có bàn thêm về **Brute-force** cho TSP ở phần nhận xét độ phức tạp, nhưng **không cài đặt** phương pháp này trong chương trình.
+
 ## 📖 Nội dung lý thuyết trong báo cáo
 
 1. Hệ thống định nghĩa: ma trận kề, đồ thị liên thông, chu trình.
