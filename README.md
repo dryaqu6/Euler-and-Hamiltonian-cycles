@@ -1,5 +1,10 @@
 # Bài toán định tuyến giao hàng — chu trình Euler/Hamilton và TSP
 
+> **Đồ án môn học, 2025 — 4 thành viên** (xem bảng phân công ở trang cuối báo cáo `report/final_PPS.pdf`): Lê Hoàng An (22110002), Trần Duy An (22110008), Phạm Hoàng Dũng (22110043), Nguyễn Kỳ Anh (19110263).
+> **Phần đóng góp của tôi (Trần Duy An):** điều kiện tồn tại chu trình Euler/Hamilton, thuật toán Hierholzer, thuật toán quay lui tìm chu trình Hamilton, phân tích độ phức tạp, và phần thuyết trình. **Phần cài đặt chương trình do thành viên khác viết (Phạm Hoàng Dũng).**
+> **Ngoài ra, tôi có đóng góp — làm chung với thành viên khác, không làm một mình — ở mục 4.1 (mô hình hoá bài toán giao hàng thành đồ thị) và mục 4.3 (các thuật toán giải TSP).** Hai mục này **không được gán cho ai** trong bảng phân công cuối báo cáo.
+> **Về lịch sử commit:** toàn bộ commit trong repo này đứng tên tôi vì tôi là người archive dự án lên GitHub một năm sau khi học xong. **Lịch sử commit không phản ánh phân công công việc.**
+
 Cài đặt và so sánh các thuật toán định tuyến trên đồ thị có trọng số, đóng gói trong lớp `VisualizedDeliveryProblemSolver` (nhận ma trận kề n×n, quy ước `0` = không có cạnh).
 
 Bài toán thực tế: cho một mạng lưới các điểm giao hàng, tìm lộ trình đi qua tất cả các điểm và quay về kho xuất phát với tổng quãng đường nhỏ nhất.
